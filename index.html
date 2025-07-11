@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader"></div>
+
+  <header>
+    <h1>🎬 Movie App</h1>
+    <div class="controls">
+      <form id="form" aria-label="Search Movies">
+        <input 
+          type="text" 
+          id="search" 
+          placeholder="Search for a movie..." 
+          aria-label="Search for a movie"
+        />
+        <button type="submit">Search</button>
+      </form>
+      <button id="toggle-theme" aria-label="Toggle dark/light mode">🌓</button>
+    </div>
+  </header>
+
+  <section id="tags" class="tags"></section>
+
+  <main id="main" class="movies-container"></main>
+
+  <div class="pagination">
+    <button id="prev" class="page-btn">Prev</button>
+    <span id="current">1</span>
+    <button id="next" class="page-btn">Next</button>
+  </div>
+
+  <!-- Overlay for trailer videos -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content" id="overlay-content"></div>
+    <div class="arrows">
+      <div id="left-arrow" class="arrow left-arrow">&#10094;</div>
+      <div id="right-arrow" class="arrow right-arrow">&#10095;</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
